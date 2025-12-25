@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Oliro movies</title>
+      <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+    <!-- Link Swiper's CSS -->
+    <!-- <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    /> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  </head>
+  <body>
+    
+    
+    <!-- nav-bar -->
+      <header>
+        <a href="#home" class="logo"> <i class="bx bx-movie"></i>Oliro </a>
+      <div class="bx bx-menu" id="menu-icon"></div>
+      
+      <ul>
+        <span class="navbar">
+        <li><a href="#home" class="nav" class="home-active">Home</a></li>
+        <li><a href="#movies" class="nav"> Movies</a></li>
+        <li><a href="#coming" class="nav">Coming</a></li>
+        <li><a href="#newsletter" class="nav">Newsletter</a></li>
+        </span>
+        <!-- From Uiverse.io by vnuny --> 
+        <div class="search">
+          <div class="containerSearch">
+          <input checked="" class="checkbox" type="checkbox"> 
+          <div class="mainbox">
+            <div class="iconContainer">
+              <svg viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg" class="search_icon"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"></path></svg>
+            </div>
+            <form action="index.html" method="GET" class="searchBox">
+              <input class="search_input" placeholder="search" type="text">
+            </form>
+            
+          </div>
+        </div>
+      </ul>
+      </div>
+      <!-- <a href="#" class="btn">Sign In</a> -->
+    </header>
+    <div class="overlay">
+    <section class="home swiper" id="home">
+      <div class="swiper-wrapper">
+       
+      </div>
+      <div class="swiper-pagination"></div>
+    </section>
+    <!-- Swiper JS -->
+    
+    <!-- movies -->
+    <div class="movies" id="movies">
+      <h2 class="heading">Opening This week</h2>
+      <!-- Movies container -->
+      <div class="movies-container">
+        <!-- box-1 -->
+      
+    </div>
+    <!-- coming -->
+    <section class="coming" id="coming">
+      <h2 class="heading">Coming soon</h2>
+      <!-- coming container -->
+      <div class="coming-container swiper">
+        <div class="swiper-wrapper upcoming">
+          <!-- box--1 -->
+          
+        </div>
+      </div>
+    </section>
+    <!-- Newsletter -->
+    <section class="newsletter" id="newsletter">
+      <h2>Subscribe to get <br />Newsletter</h2>
+      <form action="">
+        <input type="email" class="email" placeholder="Enter Email" required />
+        <input type="submit" value="Subscribe" class="btn" />
+      </form>
+    </section>
+    
+    <!-- footer -->
+    <section class="footer">
+      <a href="" class="logo"> <i class="bx bxs-movie"></i>Oliro </a>
+      <div class="social">
+        <a href=""><i class="bx facebookSvg bxl-facebook"></i></a>
+        <!-- <a href=""><i class=" bxl-twitter"></i></a>  <a class="socialContainer containerTwo" href="#"> -->
+    <svg
+      viewBox="0 0 16 16"
+       fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+      class="socialSvg twitterSvg"
+    >
+      <path
+        d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"
+      ></path>
+    </svg>
+  </a>
+        <a href=""><i class="bx bxl-instagram instagramSvg"></i></a>
+      </div>
+    </section>
+    <!-- Copyright -->
+    <div class="copyright">
+      <p>&#169 Oliro All Rights Reserved</p>
+    </div>
+  </div>
+  </div>
+  <div class="searchResults"></div>
+  <!-- Add this just before </body> -->
+<div id="movie-modal" class="modal hidden">
+  <div class="modal-content ">
+    <span class="close-modal">&times;</span>
+    <div id="modal-details"></div>
+  </div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script> -->
+    <script type="module" src="./JS/controller.js">
+    </script>
+    
+  </body>
+</html>
