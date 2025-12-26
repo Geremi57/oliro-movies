@@ -15,10 +15,7 @@ class OpeningWeek extends mainView {
  <a class = "watch "
     href = "https://api.themoviedb.org/3/movie/${el.id}/watch/providers">
   </a>
-  <a
-  href="https://vidsrc.xyz/embed/movie?tmdb=${el.id}">
-        <i class="watch bx bx-play-circle"></i>
-  </a>
+  <button class="button watchBtn" data-id= ${el.id}>watch</button>
   </div>
 
   </div>`

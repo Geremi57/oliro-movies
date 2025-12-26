@@ -7,6 +7,7 @@ import searchView from './views/searchView.js';
 import resultsView from './views/resultsView.js';
 import openingWeekView from './views/openingWeekView.js';
 import upcomingView from './views/upcomingView.js';
+import filmView from './views/filmView.js';
 
 // console.log(TRENDING_URL);
 // console.log(model.loadFIlm);
@@ -15,7 +16,8 @@ const modal = document.querySelector('.modal');
 // model.loadFIlm("reacher");
 // console.log(model.state);
 var swiper = new Swiper('.home', {
-  spaceBetween: 30,
+  spaceBetween: 5,
+  loop: true,
   centeredSlides: true,
   autoplay: {
     delay: 14000,
@@ -90,9 +92,38 @@ const info = async function () {
   // console.log(card.class);
 };
 
+const watchFilm = async function(){
+  await controlPreview()
+  // filmView.render(window.location.href.link)
+  // console.log( document.querySelector(".watchBtn"));
+   setTimeout(() => {
+  const watchBtns = document.querySelectorAll(".watchBtn")
+  watchBtns.forEach(el => 
+  console.log(el.dataset.id))
+
+  if (!watchBtns.length) {
+    console.warn("No watch buttons found!");
+    return;
+  }
+
+  watchBtns.forEach(btn => 
+    {
+  // console.log(btn.dataset.id)
+      btn.addEventListener("click", function(){
+    console.log("heavenly");
+    const movieId = btn.dataset.id
+  // console.log( document.querySelector(".watchBtn"))
+  window.location.href = `./watch.html?link=${movieId}`
+  
+})})}, 50);
+}
+
+watchFilm()
+
 // previewView.clickCard(info);
 searchView.addSearchHandler(controlSearch);
 info();
+
 
 console.log(card);
 // const cards = [...card];

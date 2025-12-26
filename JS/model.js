@@ -28,7 +28,7 @@ export const stateFilm = async function () {
   state.openingWeek = weekFilm.results.slice(1, 17);
 
   state.upcoming = upcoming.results.slice(0, 10);
-  state.preview = response.results.slice(0, 4);
+  state.preview = response.results.slice(0, 6);
 };
 
 export const loadFIlm = async function (query) {

@@ -372,7 +372,7 @@ section {
 /* From Uiverse.io by ShrinilDhorda */
 .watchBtn {
   position: absolute;
-  bottom: 20rem;
+  bottom: 10rem;
 }
 .watch,
 .playNow {
@@ -728,6 +728,38 @@ section {
   text-align: center;
   color: var(--bg-color);
 }
+
+.link{
+  color: aqua;
+}
+
+/* From Uiverse.io by vishal2231179 */ 
+.button {
+  cursor: pointer;
+  padding: 10px 30px 10px 30px;
+  border-radius: 10px;
+  border-style: double;
+  font-weight: 600;
+  background-image: linear-gradient(
+    rgb(54, 53, 53),
+    rgb(0, 0, 0),
+    rgb(54, 54, 54)
+  );
+  color: rgb(164, 164, 162);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-color: rgb(0, 0, 0);
+  transition: 400ms;
+}
+
+.button {
+  transition: 400ms;
+  border-style: double;
+  border-color: rgb(208, 207, 207);
+  color: rgb(219, 216, 216);
+  font-size: 16px;
+  text-shadow: 1px 10px 5px rgb(61, 61, 61);
+}
+
 
 @media (max-width: 1080px) {
   .home-text {

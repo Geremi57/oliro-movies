@@ -17,14 +17,13 @@ class Preview extends mainView {
       el =>
         `<div class="swiper-slide slide container">
           <div class="home-text">
-            <img class = "previewImg" src = "https://image.tmdb.org/t/p/original${el.poster_path}"/>
-           <a class="watchBtn"
-       href="https://vidsrc.xyz/embed/movie?tmdb=${el.id}">
-             <i class=' watch bx bx-play-circle'></i>
-       </a>
+            <img class = "previewImg" src = "https://image.tmdb.org/t/p/original${el.poster_path}.jpg"/>
+             
+<button class="button watchBtn" data-id= ${el.id}>watch</button>
+
        </div>
      </div>`
-    );
+    ).join("");
   }
   clickCard(handler, cards) {
     cards.forEach(img =>
