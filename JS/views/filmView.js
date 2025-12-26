@@ -21,7 +21,9 @@ class filmView{
     _generateMarkup(){
         return `<iframe
         class="container"
-        src="https://vidsrcme.su/embed/movie?tmdb=${this._data.id}"
+        src="https://www.2embed.stream/embed/movie/${this._data}"
+       
+        frameborder="0" allowfullscreen
       ></iframe>`
     }
 }

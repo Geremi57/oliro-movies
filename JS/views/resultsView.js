@@ -21,7 +21,7 @@ class ResultsView extends mainView {
     href = "https://api.themoviedb.org/3/movie/${el.id}/watch/providers">
   </a>
   <a
-  href="https://vidsrc.xyz/embed/movie?tmdb=${el.id}">
+  href="https://www.2embed.stream/embed/movie/${el.id}">
         <i class="watch bx bx-play-circle"></i>
   </a>
   </div>
