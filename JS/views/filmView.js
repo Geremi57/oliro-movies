@@ -21,7 +21,7 @@ class filmView{
     _generateMarkup(){
         return `<iframe
         class="container"
-        src="https://www.2embed.stream/embed/movie/${this._data}"
+        src="https://vsrc.su/embed/movie?tmdb=456"
        
         frameborder="0" allowfullscreen
       ></iframe>`

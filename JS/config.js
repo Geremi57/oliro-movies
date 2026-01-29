@@ -8,6 +8,8 @@ export const SEARCH_URL = `https://api.themoviedb.org/3/search/movie?api_key=a22
 
 export const GENRE_URL = `https://api.themoviedb.org/3/genre/movie/list?api_key=a22e2ff858c7e9d92ab86711c01b6242`;
 
+
+
 // console.log(GENRE_URL.json());
 
 // const genres = async function () {

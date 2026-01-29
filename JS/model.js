@@ -28,7 +28,7 @@ export const stateFilm = async function () {
   state.openingWeek = weekFilm.results.slice(1, 17);
 
   state.upcoming = upcoming.results.slice(0, 10);
-  state.preview = response.results.slice(0, 6);
+  state.preview = response.results.slice(6, 12);
 };
 
 export const loadFIlm = async function (query) {
@@ -53,3 +53,18 @@ export const loadFIlm = async function (query) {
     console.error(err);
   }
 };
+
+export const movieDetails = async function(id) {
+  try{
+    const data  = await getJson(`https://api.themoviedb.org/3/movie/${id}?api_key=a22e2ff858c7e9d92ab86711c01b6242&language=en-US`)
+
+    return {
+      id:data.id,
+      details:data.overview,
+      title:data.original_title,
+    }
+  } catch (err) {
+    console.log(err);
+  }
+
+}

@@ -8,6 +8,7 @@ import resultsView from './views/resultsView.js';
 import openingWeekView from './views/openingWeekView.js';
 import upcomingView from './views/upcomingView.js';
 import filmView from './views/filmView.js';
+import { movieDetails } from './model.js';
 
 // console.log(TRENDING_URL);
 // console.log(model.loadFIlm);
@@ -17,7 +18,7 @@ const modal = document.querySelector('.modal');
 // console.log(model.state);
 var swiper = new Swiper('.home', {
   spaceBetween: 5,
-  loop: true,
+  // loop: true,
   centeredSlides: true,
   autoplay: {
     delay: 14000,
@@ -59,6 +60,7 @@ const controlPreview = async function () {
   await openingWeekView.render(model.state.openingWeek);
   await upcomingView.render(model.state.upcoming);
   console.log(await model.state.preview);
+  console.log(await model.state.openingWeek);
 };
 
 const controlSearch = async function () {
@@ -183,6 +185,36 @@ navbarElements.forEach(el =>
 //   document.querySelector('.close-modal').onclick = function () {
 //     document.getElementById('movie-modal').classList.add('hidden');
 //   };
+
+const closeBtn = modal.querySelector('.modal-close');
+const overlay = modal.querySelector('.modal-overlay');
+const movieTitle = modal.querySelector(".movieTitle")
+const filmDetails = modal.querySelector(".movieDetails")
+document.addEventListener('click', async e => {
+  const card = e.target.closest('.weekImg');
+  if (!card) return;
+  
+  console.log(card.dataset.id);
+  const details = await model.movieDetails(card.dataset.id)
+   
+  movieTitle.textContent = details.title
+  filmDetails.textContent = details.details
+console.log(details);
+
+
+  await modal.classList.remove('hidden');
+});
+
+const closeModal = () => {
+  modal.classList.add('hidden');
+};
+
+closeBtn.addEventListener('click', closeModal);
+overlay.addEventListener('click', closeModal);
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeModal();
+});
 
 
 // });

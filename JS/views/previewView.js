@@ -17,7 +17,7 @@ class Preview extends mainView {
       el =>
         `<div class="swiper-slide slide container">
           <div class="home-text">
-            <img class = "previewImg" src = "https://image.tmdb.org/t/p/original${el.poster_path}.jpg"/>
+            <img class = "previewImg" src = "https://image.tmdb.org/t/p/original/${el.backdrop_path}.jpg"/>
              
 <button class="button watchBtn" data-id= ${el.id}>watch</button>
 <button class="buttoninfo button watchBtn">
